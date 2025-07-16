@@ -1,17 +1,19 @@
-numbers = [1,2,3,4,5]
-def rev_list(l):
-    empty_l = []
-    copy = l.copy()
-    while copy:
-        empty_l.append(copy.pop())
-    return empty_l
+number1 = [[12], [13], [14]]
 
-print(rev_list(numbers))
 
-# def rev_list(l):
-#     r_list = []
-#     copy = l.copy()
-#     while copy:
-#         r_list.append(copy.pop())
-#     return r_list
-# print(rev_list(numbers))
+
+# for sublist in number1:
+#     emptyL = []
+#     for i in sublist:
+#        revser_l = int(str(i)[::-1])
+#     emptyL.append(revser_l)
+#     print(emptyL, end=",")
+    
+emptyL = []
+for sublist in number1[::-1]: #[14] [13] [12]
+    for i in sublist:
+        rev = []
+        rev.append(int(str(i)[::-1]))
+    emptyL.append(rev)
+print(emptyL)
+    
