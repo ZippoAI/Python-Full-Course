@@ -1,13 +1,11 @@
-# Looping inside loop
+numbers = [[12],[13],[14],[15]]
+empty = []
+for sublist in numbers:
+    rev = []
+    for i in sublist:
+        rev.append(int(str(i)[::-1]))
+    empty.append(rev)
+print(empty)
 
-fruits = ['orange', 'apple', 'pear', 'banana']
-
-for i in fruits:
-    print(i)
-
-print('--------------------------------')
-# while
-i = 0
-while i<len(fruits):
-    print(fruits[i])
-    i+=1
+    
+ 
