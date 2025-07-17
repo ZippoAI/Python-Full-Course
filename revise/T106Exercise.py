@@ -1,4 +1,4 @@
-print(type(list))
+
 
 new_list = [1,2,3, [1,2], [3,4],[12]]
 
