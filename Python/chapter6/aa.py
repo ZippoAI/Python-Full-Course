@@ -1,6 +1,7 @@
-a = 5
-b = 5
+example =  ('One', 'Two', 'Three')
+example2 = (1,2,3,4,5)
+print(example[2])
 
-c = a+b,5
 
-print(sum(c))
+print(example2.index(5))
+print(example.index('One'))
