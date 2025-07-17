@@ -1,7 +1,12 @@
-def user_info(first_name, last_name , age= 21):
-    print(f"Your First Name is: {first_name}")
-    print(f"Your Lirst Name is: {last_name}")
-    print(f"Your Age is: {age}")
+number  = 12345
+total = 0
+for line in str(number):
+    for i in line+1:
+        print(i, end=" ")
+        
+        
 
-
-user_info('Bulbul','Hassan')
+for i in range(1, 6):          # Outer loop for rows
+    for j in range(1, i+1):    # Inner loop for columns
+        print(j, end='')       # Print numbers on the same line
+    print()                    # Move to next line
