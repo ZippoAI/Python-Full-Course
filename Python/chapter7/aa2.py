@@ -49,4 +49,3 @@ popped_item = user_info2.popitem()
 print("Popped item:", popped_item)
 print("Remaining values in user_info2:", user_info2.values())
 
-print('DONe')
