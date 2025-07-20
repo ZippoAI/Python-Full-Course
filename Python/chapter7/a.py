@@ -1,15 +1,30 @@
-user_info = {
-    'name': 'ZiPPO',
-    'age': 21
-}
+new_dictionary = dict(name='Zippo', age = 21)
+
+print(new_dictionary)
+
+#FromKey
 
 
-user_info['Fav_song'] = ['yummy', 'descpacito']
 
-user_info['Fav_movie'] = ['Krish', 'Raone']
+d = {'name':'ZiPPO', 'age':'unknown'}
 
 
-popped_item = user_info.popitem()
+# d = dict.fromkeys(['name', 'age'], ['unknown', 'unkown'])
 
-print(user_info)
+# print(d)
 
+
+print(d.get('name'))
+
+
+print(d.get('name'))
+
+if d.get('name'):
+    print('Present')
+else:
+    print('Not Present')
+
+d2 = d.copy()
+
+d2.popitem()
+print(d)
