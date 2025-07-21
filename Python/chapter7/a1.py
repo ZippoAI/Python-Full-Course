@@ -1,28 +1,7 @@
-new_dictionary = {
-    'name':'Bulbul',
-    'age': '21',
-    'Fav_movies':['Avengers', 'Plastic-Man', 'Cat-Man', 'Makdi-Man'],
-    'Fav_singers':['Justin Fiber', 'Sawan Mendis', 'Marlie Puth']
-}
+def cube_finder(n):
+    empty = {}
+    for i in range(1, n+1):
+        empty[i] = i * i * i   # store cube as value
+    return empty
 
-
-
-
-if ['Avengers', 'Plastic-Man', 'Cat-Man', 'Makdi-Man'] in new_dictionary.values():
-    print('Present')
-else:
-    print('Not present')
-
-
-print('-----------Loops-----------------')
-
-
-for i in new_dictionary:
-    print(new_dictionary[i])
-
-print('------------')
-
-user_info_values = new_dictionary.values()
-
-print(user_info_values)
-
+print(cube_finder(3))
