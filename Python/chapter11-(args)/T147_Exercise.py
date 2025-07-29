@@ -33,6 +33,8 @@ print(name_rev(names))
 # name_rev(names, reverse_= True)
 
 print('---------------more short------------')
+
+
 def name_rev2(name, reverse_ = False):
     return [ i[::-1].capitalize() if reverse_ == True else i.capitalize() for i in name]
 
