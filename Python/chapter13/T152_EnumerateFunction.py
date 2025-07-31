@@ -23,6 +23,13 @@ for pos , name in enumerate(names):
 print()
 print('--------------------')
 
+# you can assign a custom starting digit in enumerate
+for pos , name in enumerate(names, start=100):
+    print(f'{pos} -------> {name}')
+
+print()
+print('--------------------')
+
 def find_pos (l, target):
     for pos, name in enumerate(l):
         if name == target:
