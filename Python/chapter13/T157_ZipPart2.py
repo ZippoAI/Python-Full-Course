@@ -6,7 +6,7 @@ final = list(zip(l2, l1))
 
 print(final)
 
-# list extraction
+# list unpack
 
 li1 , li2 = zip(*final)
 
