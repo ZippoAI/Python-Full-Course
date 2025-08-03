@@ -20,14 +20,8 @@ while True:
     
     if name != username:
         print('you entered wrong username')
-        continue
-    
-    if userpassword!=password:
-        print('you entered wrong password')
-        continue
-        
-    print('Login succesfull')
-
-    break
-            
-
+    elif userpassword!=password:
+            print('you entered wrong password')             
+    else:
+        print('Login succesfull')
+        break
