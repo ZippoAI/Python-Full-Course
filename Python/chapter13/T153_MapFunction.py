@@ -10,7 +10,7 @@ print([square(1), square(2), square(3), square(4)])
 
 
 print()
-print('-------Uisng Map Function---------')
+print('-------Using Map Function---------')
 print()
 
 squares = list(map(square, numbers))
@@ -44,6 +44,6 @@ print (empty)
 
 names = ['abc', 'abcd', 'abcde']
 
-lenght = map(len, names)
-for i in lenght:
+length = map(len, names)
+for i in length:
     print(i)
