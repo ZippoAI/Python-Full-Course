@@ -1,32 +1,19 @@
-nums = [1, 2, 3, 4, 5, 6]
+l1 = [1,2,3,4]
+l2 = [4,3,2,1]
+l3 = [5,4,1,3]
 
+def average_finder_column(*args):
+    result = []
+    for pair in zip(*args):
+        result.append(sum(pair)/len(pair))
+    return result
 
-new_l1 = list(map(lambda a: a**2, nums))
+print(average_finder_column(l1,l2,l3))
 
-print(new_l1)
-
-
-
-celsius = [0, 10, 20, 34.5]
-
-fahrenheit = list(map(lambda a: (a * 9/5) + 32 ,celsius))
-
-print(fahrenheit)
-
-names = ["Alice", "Bob", "Charlotte", "David", "Eleanor"]
-
-new_name = list(filter(lambda a: len(a)> 5, names))
-print(new_name)
-
-
-nums = [-5, 3, -1, 101, 0, 8]
-
-new_num = list(map(lambda a: a*2 , filter( lambda a: a>0, nums)))
-
-print(new_num)
-
-
-items = ["12", "abc", "45", "hello", "90"]
-remove_non_digit = list(map(lambda a: int(a), filter(lambda a: a.isdigit(), items)))
-print(remove_non_digit)
-
+def average_finder_row(*args):
+    result = []
+    for i in args:
+        result.append(sum(i)/len(i))
+    return result
+    
+print(average_finder_row(l1,l2,l3))

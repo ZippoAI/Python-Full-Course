@@ -1,15 +1,19 @@
-l1 = [1,2,3]
+l1 = [1,2,3,4]
+l2 = [4,3,2,1]
+l3 = [5,4,1,3]
 
-l2 = [4,5,6]
+def average_finder_column(*args):
+    result = []
+    for pair in zip(*args):
+        result.append(sum(pair)/len(pair))
+    return result
 
-l3 = [7,8,9]
+print(average_finder_column(l1,l2,l3))
 
-def func(*args):
-    empty = []  
+def average_finder_row(*args):
+    result = []
     for i in args:
-        empty.append(sum(i)/len(i))
-    return empty
-        
+        result.append(sum(i)/len(i))
+    return result
     
-
-print(func(l1,l2,l3))
+print(average_finder_row(l1,l2,l3))
