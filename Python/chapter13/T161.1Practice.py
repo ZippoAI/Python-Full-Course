@@ -83,27 +83,22 @@ count_signs(1, -2, -5, 4, 0) → {'positive': 2, 'negative': 2}
 count_signs(1, 'abc') → "Wrong Input"
 '''
 
-def count_number(*args):
+
+def count_signs(*args):
     pos_count = 0
     neg_count = 0
     if all([(type(arg) == int or type(arg) == float) for arg in args]):
         for num in args:
             if num>0:
                 pos_count+=1
-
+                
             else:
                 neg_count+=1
 
-        return  f"Positive: {pos_count}, Negative: {neg_count}"
+        return f" Total Positive: {pos_count} , Total Negative: {neg_count}"
     else:
-        return 'Wrong Number'
-
-
-
-                
-
-
+        return "Wrong Input"
+    
+print(count_signs(1,2,3,4,-3,-2))
         
-print(count_number(2,4,-1,-2))
-
-
+        
