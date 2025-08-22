@@ -3,7 +3,7 @@ def decorator_func(any_func):
     def wrapper_func():
         print('This is wrapper Function')
         any_func()
-    return wrapper_func()
+    return wrapper_func
 
 
 @decorator_func
