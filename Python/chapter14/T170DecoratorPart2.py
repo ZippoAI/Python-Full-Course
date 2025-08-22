@@ -12,3 +12,9 @@ def func(a):
     print('This is function with argument: ',a)
 
 func(8)
+
+@decorator_func
+def square(a,b):
+    return a+b
+
+print(square(2,3))
