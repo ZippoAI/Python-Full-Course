@@ -9,16 +9,14 @@ def decorator_func(any_func):
         print('This is awesome Function')
         return any_func(*args, **kwargs)
     return wrapper_func
-@decorator_func    
-def func(a):
-    print('This is function with argument: ',a)
-
-
 
 @decorator_func
-def square(a,b):
-    '''This is add function'''
-    return a+b
+def add(a,b):
+    '''
+    This is add function
+    '''
+    return a + b
 
-print(square.__doc__)
-print(square.__name__)
+a = decorator_func(add)
+
+print(a(5,5))
