@@ -1,22 +1,19 @@
 
 
 def decorator_func(any_func):
-    def wrapper_func():
+    def wrapper_func(*args, **kwargs):
         print('This is awesome function')
-        any_func()
+        return any_func(*args, **kwargs)
     return wrapper_func
 
-def func1():
-    print('This is function 1')
-
 @decorator_func
-def func2():
-    print('This is function 2')
+def func(a):
+    print('This is function with argument: ', a)
 
 
+func(7)
+@decorator_func
+def add(a, b):
+    return a+b
 
-# f = decorator_func(func1)
-# f()
-
-
-func2()
+print(add(5,5))
