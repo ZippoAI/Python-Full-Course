@@ -1,25 +1,19 @@
-
 from functools import wraps
+
 
 def decorator_func(any_func):
     @wraps(any_func)
-    def wrapper_function(*args, **kwargs):
-        '''
-        This is wrapper function
-        '''
-        print('This is awesome function')
+    def wrapper(*args, **kwargs):
+        print(f'You are calling {any_func.__name__} Function')
+        print(any_func.__doc__)
         return any_func(*args, **kwargs)
-    return wrapper_function
-
-
-
+    return wrapper
 
 @decorator_func
-def add(a, b):
+def add(a,b):
     '''
-    This is add function
+    It will take two numbers as argument and returns their sum
     '''
-    return a+b
+    return a + b
 
-print(add.__doc__)
-print(add.__name__)
+print(add(4,5))
