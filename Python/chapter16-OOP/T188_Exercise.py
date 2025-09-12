@@ -1,4 +1,5 @@
 class Laptop:
+    discount_percent = 10
     def __init__(self, brand_name, model, price):
         self.brand_name = brand_name
         self.model = model
@@ -7,14 +8,14 @@ class Laptop:
     def __str__(self):
         return f"{self.brand_name} - {self.model} - ${self.price}"
 
-    def discount(self, value):
-        discount_amount = self.price * value/100
+    def discount(self):
+        discount_amount = self.price * Laptop.discount_percent/100
         return f"Discount Amount - ${discount_amount} \nFinal Price - ${self.price - discount_amount }"
         
     
 
-l = Laptop('Asus', 'Tuf Gaming', 100)
+l = Laptop('Asus', 'Tuf Gaming', 10010)
 
 print(l)
 
-print(l.discount(10))
+print(l.discount())
