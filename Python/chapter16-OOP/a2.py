@@ -1,5 +1,6 @@
 class Laptop:
     discount = 10
+    discount2 = 15
     def __init__(self, brand_name, model_name, price):
         self.brand_name = brand_name
         self.model_name = model_name
@@ -9,12 +10,24 @@ class Laptop:
         return f"{self.brand_name} - {self.model_name} - {self.price}"
 
     def apply_discount(self):
-        discount_amount = self.price * Laptop.discount/100
+        if self.brand_name[0].lower() == 'a':
+            discount_amount =  Laptop.discount
+        else:
+            discount_amount = Laptop.discount2
+            
+        discount_amount = self.price * discount_amount/100
         return f'Total price - {self.price}\nDiscount amount - {discount_amount} \nFinal price - {self.price - discount_amount}'
-    
+        
 
-l = Laptop('Asus', 'Tuf Gaming', 95000)
+l = Laptop('HP', 'Victus', 98999)
+l2 = Laptop('Asus', 'ROG Strix G16', 113990)
 
 print(l)
-
 print(l.apply_discount())
+print('---------------------')
+print(l2)
+
+
+print(l2.apply_discount())
+
+
