@@ -1,0 +1,43 @@
+🔹 Beginner-Level Practice
+
+Student Grade System
+
+Add a method get_grade() that returns "Pass" if GPA ≥ 3.0, else "Fail".
+
+Use a class method to calculate how many students passed and failed.
+
+Track Highest GPA
+
+Add a class variable to store the highest GPA student.
+
+Update it inside __init__ whenever a new student with a higher GPA is added.
+
+Create a class method get_topper() to return the name and GPA of the topper.
+
+🔹 Intermediate-Level Practice
+
+Multiple Batches
+
+Modify your class so each Student also has a batch (e.g., "2023", "2024").
+
+Create a class method get_batch_average(batch_name) that returns the average GPA of students from a particular batch.
+
+Scholarship Eligibility
+
+Create a class method get_scholarship_students(min_gpa) that returns a list of student names who qualify.
+
+🔹 Advanced-Level Practice
+
+Student Registry
+
+Keep a list of all student objects in a class variable.
+
+Add a class method search_student(name) that returns the student’s info if found.
+
+Add a class method remove_student(name) that removes a student and updates the total count and GPA.
+
+Inheritance Challenge
+
+Create a subclass GraduateStudent that inherits from Student but adds an attribute like thesis_title.
+
+Override get_info() to also show thesis info.
