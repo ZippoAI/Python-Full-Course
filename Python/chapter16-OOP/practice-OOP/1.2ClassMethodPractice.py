@@ -61,6 +61,7 @@ student3 = Grade_system("Alkama", 5.7)
 
 print(student1)
 print(student2)
+print(student3)
 
 print(Grade_system.pass_fail())
 
