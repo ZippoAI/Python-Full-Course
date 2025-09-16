@@ -10,8 +10,9 @@ class Person:
         self.age = age
 
     @classmethod
-    def count_instances(cls):
-        return f"You have created {cls.count_instance} instances"
+    def total_instance(cls):
+        return f"You have created {cls.count_instance}"
+
 
     def __str__(self):
         if self.age>=18:
@@ -20,6 +21,7 @@ class Person:
             message = 'You are below 18'
         return f"{self.first_name} {self.last_name}\n{message}"
     
+    
         
 
 person1 = Person('Bulbul', 'Hassan', 18)
@@ -27,4 +29,5 @@ person1 = Person('Bulbul', 'Hassan', 18)
 person1 = Person('Bulbul', 'Hassan', 18)
 print(person1)
 
-print(Person.count_instances())
+
+print(Person.total_instance())
