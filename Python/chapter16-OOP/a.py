@@ -1,20 +1,31 @@
 class Laptop:
-    discount = 10
-    def __init__(self, brand_name, model_name, price):
+    def __init__(self, brand_name, model, price):
         self.brand_name = brand_name
-        self.model_name = model_name
-        self.price = price
+        self.model = model
+        
+        if price>0:
+            self._price = price
+        else:
+            self._price = 0
+    @property
+    def full_name(self):
+        return f"{self.brand_name} - {self.model} - {self.price}"
+    
+    @property
+    def price(self):
+        return self._price
+    
+    @price.setter
+    def price(self, new_price):
+        self._price = max(new_price, 0)
 
-    def __str__(self):
-        return f"{self.brand_name} - {self.model_name} - {self.price}"
-
-    def apply_discount(self):
-        discount_amount = self.price * Laptop.discount/100
-        return f'Total price - {self.price}\nDiscount amount - {discount_amount} \nFinal price - {self.price - discount_amount}'
     
 
-l = Laptop('Asus', 'Tuf Gaming', 95000)
+laptop1 = Laptop('asus', 'vivo book', 1000)
 
-print(l)
+laptop1.price = 400
 
-print(l.apply_discount())
+
+print(laptop1.price)
+print(laptop1.full_name)
+
