@@ -19,4 +19,3 @@ while True:
         # don’t break here though cause if they’re wrong you want them to try again
         print('Try Again')
 
-j ikj
