@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Stunning Navbar Designs</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.showcase {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.navbar-container {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-label {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Navbar 1: Glassmorphism Floating */
+.nav1 {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.nav1 .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav1 .nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav1 .nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav1 .nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav1 .nav-links a:hover::before {
+  width: 80%;
+}
+
+.nav1 .nav-links a:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+/* Navbar 2: Neon Cyberpunk */
+.nav2 {
+  background: #0a0a0a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.nav2 .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.nav2 .nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.nav2 .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border: 2px solid #ff00ff;
+  background: transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav2 .nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ff00ff, transparent);
+  transition: all 0.5s ease;
+}
+
+.nav2 .nav-links a:hover::before {
+  left: 100%;
+}
+
+.nav2 .nav-links a:hover {
+  box-shadow: 0 0 15px #ff00ff, inset 0 0 15px rgba(255, 0, 255, 0.3);
+  color: #00ffff;
+  border-color: #00ffff;
+}
+
+/* Navbar 3: Minimal Elegant */
+.nav3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav3 .logo {
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #1a1a1a;
+}
+
+.nav3 .nav-links {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav3 .nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.95em;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav3 .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+.nav3 .nav-links a:hover {
+  color: #1a1a1a;
+}
+
+.nav3 .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Navbar 4: Gradient Wave */
+.nav4 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: wave 3s infinite;
+}
+
+@keyframes wave {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.nav4 .logo {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+}
+
+.nav4 .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  z-index: 1;
+}
+
+.nav4 .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav4 .nav-links a:hover {
+  background: white;
+  color: #764ba2;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Navbar 5: Neumorphic Modern */
+.nav5 {
+  background: #e0e5ec;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+}
+
+.nav5 .logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav5 .nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav5 .nav-links a {
+  color: #555;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 10px rgba(163,177,198,0.4), -5px -5px 10px rgba(255,255,255, 0.4);
+}
+
+.nav5 .nav-links a:hover {
+  box-shadow: inset 5px 5px 10px rgba(163,177,198,0.4), inset -5px -5px 10px rgba(255,255,255, 0.4);
+  color: #667eea;
+}
+
+/* Navbar 6: Bold Geometric */
+.nav6 {
+  background: #1a1a1a;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff, #a78bfa);
+}
+
+.nav6 .logo {
+  font-size: 1.8em;
+  font-weight: 900;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background: #ff6b6b;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.nav6 .nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.nav6 .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav6 .nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #ff6b6b;
+  transition: height 0.3s ease;
+}
+
+.nav6 .nav-links a:hover::before {
+  height: 100%;
+}
+
+.nav6 .nav-links a span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Navbar 7: Liquid Morphism */
+.nav7 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  position: relative;
+}
+
+.nav7 .blob {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 8s ease-in-out infinite;
+  filter: blur(20px);
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: translate(0, 0);
+  }
+  25% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(50px, 20px);
+  }
+  50% {
+    border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
+    transform: translate(-30px, 30px);
+  }
+  75% {
+    border-radius: 70% 30% 60% 40% / 30% 70% 50% 60%;
+    transform: translate(30px, -20px);
+  }
+}
+
+.nav7 .logo {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+}
+
+.nav7 .nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  z-index: 1;
+}
+
+.nav7 .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.nav7 .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Navbar 8: Split Accent */
+.nav8 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 40px;
+  background: #fff;
+  border-left: 5px solid #667eea;
+  border-right: 5px solid #764ba2;
+}
+
+.nav8 .logo {
+  font-size: 1.6em;
+  font-weight: 900;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav8 .nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+.nav8 .nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav8 .nav-links a::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid #667eea;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav8 .nav-links a:hover {
+  color: #667eea;
+  padding-left: 15px;
+}
+
+.nav8 .nav-links a:hover::before {
+  opacity: 1;
+}
+
+.nav8 .cta {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.nav8 .cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Navbar 9: Aurora Gradient */
+.nav9 {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav9::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nav9 .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.nav9 .nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  z-index: 1;
+}
+
+.nav9 .nav-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav9 .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Navbar 10: Pixel Perfect Grid */
+.nav10 {
+  background: #000;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  height: 70px;
+  border: 3px solid #00ff00;
+}
+
+.nav10 .logo {
+  background: linear-gradient(135deg, #00ff00, #00aa00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #000;
+  font-family: 'Courier New', monospace;
+  border-right: 3px solid #00ff00;
+}
+
+.nav10 .nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0 20px;
+  gap: 0;
+}
+
+.nav10 .nav-links a {
+  color: #00ff00;
+  text-decoration: none;
+  padding: 0 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  border-right: 1px solid #003300;
+  transition: all 0.2s ease;
+}
+
+.nav10 .nav-links a:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+.nav10 .status {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  border-left: 3px solid #00ff00;
+  gap: 10px;
+}
+
+.nav10 .dot {
+  width: 10px;
+  height: 10px;
+  background: #00ff00;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav8 {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+<div class="showcase">
+  <h1>🎨 10 Stunning Navbar Designs</h1>
+  
+  <div class="navbar-container">
+    <div class="navbar-label">Design #1</div>
+    <nav class="nav1">
+      <div class="logo">GLASSIFY</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #2</div>
+    <nav class="nav2">
+      <div class="logo">NEON</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Tech</a></li>
+        <li><a href="#">Future</a></li>
+        <li><a href="#">Grid</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #3</div>
+    <nav class="nav3">
+      <div class="logo">MINIMAL</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Studio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #4</div>
+    <nav class="nav4">
+      <div class="blob"></div>
+      <div class="logo">GRADIENT</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #5</div>
+    <nav class="nav5">
+      <div class="logo">NEURO</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #6</div>
+    <nav class="nav6">
+      <div class="logo">BOLD</div>
+      <ul class="nav-links">
+        <li><a href="#"><span>Home</span></a></li>
+        <li><a href="#"><span>Work</span></a></li>
+        <li><a href="#"><span>Team</span></a></li>
+        <li><a href="#"><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #7</div>
+    <nav class="nav7">
+      <div class="blob"></div>
+      <div class="logo">LIQUID</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Artists</a></li>
+        <li><a href="#">Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #8</div>
+    <nav class="nav8">
+      <div class="logo">ACCENT</div>
+      <a href="#" class="cta">Get Started</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #9</div>
+    <nav class="nav9">
+      <div class="logo">AURORA</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Create</a></li>
+        <li><a href="#">Connect</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar-container">
+    <div class="navbar-label">Design #10</div>
+    <nav class="nav10">
+      <div class="logo">MATRIX</div>
+      <ul class="nav-links">
+        <li><a href="#">System</a></li>
+        <li><a href="#">Data</a></li>
+        <li><a href="#">Network</a></li>
+      </ul>
+      <div class="status">
+        <div class="dot"></div>
+        <span>ONLINE</span>
+      </div>
+    </nav>
+  </div>
+
+</div>
+</body>
+</html>
