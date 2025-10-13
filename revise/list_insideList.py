@@ -25,3 +25,4 @@ for sublist in text3:
         empty_list.append(i)
 print(empty_list[::-1])
         
+        

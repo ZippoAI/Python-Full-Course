@@ -15,7 +15,11 @@ print(fruits1)
 
 # Delete Data from list
 
-fruits = ['mango', 'apple', 'Apple', 'kiwi']
+fruits = ['mango', 'apple', 'Apple', 'kiwi', 'mango']
 print()
-fruits.pop()
+# fruits.pop()
+print(fruits)
+
+fruits.remove('mango')
+print()
 print(fruits)
