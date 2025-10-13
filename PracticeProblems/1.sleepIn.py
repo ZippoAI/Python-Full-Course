@@ -14,5 +14,9 @@ def sleepIn(weekday, vacation):
         return True
     else:
         return False
+    
+print(sleepIn(False, False))
+print(sleepIn(True, False))
+print(sleepIn(False, True))
 
     
