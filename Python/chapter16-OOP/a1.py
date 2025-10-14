@@ -1,17 +1,16 @@
-#Instance Method in OOP
+# Class Variable
 
-class Person:
-    def __init__(self, first_name, last_name, age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+class Circle:
+    pi = 3.14
+    def __init__(self, radius):
+        self.radius = radius
+        
 
-    def full_name(self):
-        return f"{self.first_name} {self.last_name}"
+    def calc_circumference(self):
+        return 2*Circle.pi*self.radius
+    
 
+c = Circle(4)
+c2 = Circle(5)
 
-p1 = Person('Bulbul', 'Hassan', 21)
-p2 = Person('Hassan', 'Bulbul', 21)
-
-print(p1.full_name())
-print(p2.full_name())
+print(c.calc_circumference())
