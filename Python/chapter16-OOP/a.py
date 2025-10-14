@@ -1,31 +1,18 @@
 class Laptop:
-    def __init__(self, brand_name, model, price):
+    def __init__(self, brand_name, model_name, price):
         self.brand_name = brand_name
-        self.model = model
+        self.model_name = model_name
+        self.price = price
+
+    def DiscountPrice(self,discount_):
+        discount_amount = (discount_/100)*self.price
+        return f"Total - {self.price} Discount - {discount_}%({discount_amount} Rs)\nFinal Price - {self.price - discount_amount}\nDiscount amount"
+
+
         
-        if price>0:
-            self._price = price
-        else:
-            self._price = 0
-    @property
-    def full_name(self):
-        return f"{self.brand_name} - {self.model} - {self.price}"
-    
-    @property
-    def price(self):
-        return self._price
-    
-    @price.setter
-    def price(self, new_price):
-        self._price = max(new_price, 0)
 
-    
+l1 = Laptop('Asus', 'Tuf', 200)
 
-laptop1 = Laptop('asus', 'vivo book', 1000)
+print(l1.brand_name)
 
-laptop1.price = 400
-
-
-print(laptop1.price)
-print(laptop1.full_name)
-
+print(l1.DiscountPrice(20))

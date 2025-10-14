@@ -1,14 +1,17 @@
-class Laptop:
-    def __init__(self, brand_name, model_name, price):
-        self.brand_name = brand_name
-        self.model_name = model_name
-        self.price = price
-        self.laptop_name = brand_name + ' ' +model_name
+#Instance Method in OOP
+
+class Person:
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
 
 
-laptop1 = Laptop('Asus', 'Tuf', 1500)
-laptop2 = Laptop('Acer', 'Nitro', 1000)
+p1 = Person('Bulbul', 'Hassan', 21)
+p2 = Person('Hassan', 'Bulbul', 21)
 
-print(laptop1.brand_name)
-        
-print(laptop1.laptop_name)
+print(p1.full_name())
+print(p2.full_name())
