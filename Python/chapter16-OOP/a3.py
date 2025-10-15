@@ -1,3 +1,4 @@
+#class method as constructor
 class Person:
     count_instance = 0 #class variable / class attribute
     def __init__(self, first_name, last_name, age):
@@ -6,6 +7,10 @@ class Person:
         self.age = age
         Person.count_instance+=1
 
+    @classmethod
+    def from_string(cls, string):
+        first, last, age = string.split(',')
+        return cls(first, last, age)
 
     @classmethod
     def count_instances(cls):
@@ -29,6 +34,7 @@ class Person:
 p1 = Person('Zippo', 'Gaming', 20)
 p2 = Person('Bulbul', 'Hassan', 17)
 
-print(p1.is_above18())
 
-print(Person.count_instances())
+p3 = Person.from_string('Bulbul,hassan,24')
+
+print(p3.full_name())
