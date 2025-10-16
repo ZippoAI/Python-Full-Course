@@ -1,45 +1,33 @@
-#class method as constructor
-class Person:
-    count_instance = 0 #class variable / class attribute
-    def __init__(self, first_name, last_name, age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-        Person.count_instance+=1
+class Phone:
+    def __init__(self, brand_name, model_name, price):
+        self.brand_name = brand_name
+        self.model_name = model_name
+        self._price = price
 
-    @classmethod
-    def from_string(cls, string):
-        first, last, age = string.split(',')
-        return cls(first, last, age)
-
-    @classmethod
-    def count_instances(cls):
-        return f"You have created {cls.count_instance} of person class"
-
-    @staticmethod
-    def hello():
-        print('Hello Static method')
+    def make_a_call(self, phone_number):
+        return(f"Calling {phone_number}.....")
 
     def full_name(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.brand_name} {self.model_name}"
     
-    def is_above18(self):
-        if self.age>=18:
-            return f"{self.first_name} is 18+"
-        else:
-            return f"{self.first_name} is under 18"
-    
-        
+
+phone1 = Phone('Nokia', '1100', 1000)
+
+print(phone1._price)
+phone1._price = -1000
+print(phone1._price)
+
+print()
+print('-------------------------------')
+
+l = [3,4,1,2]
+
+l.sort() 
 
 
+print(l)
 
+p1 = Phone('iphone', '14 pro max', 1400)
 
-p1 = Person('Zippo', 'Gaming', 20)
-p2 = Person('Bulbul', 'Hassan', 17)
-
-
-p3 = Person.from_string('Bulbul,hassan,24')
-
-print(p3.full_name())
-
-Person.hello()
+print(Phone.make_a_call(p1,9101600489))
+print(p1.make_a_call(9101600489))
