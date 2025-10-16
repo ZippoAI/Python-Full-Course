@@ -16,6 +16,9 @@ class Person:
     def count_instances(cls):
         return f"You have created {cls.count_instance} of person class"
 
+    @staticmethod
+    def hello():
+        print('Hello Static method')
 
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
@@ -38,3 +41,5 @@ p2 = Person('Bulbul', 'Hassan', 17)
 p3 = Person.from_string('Bulbul,hassan,24')
 
 print(p3.full_name())
+
+Person.hello()
